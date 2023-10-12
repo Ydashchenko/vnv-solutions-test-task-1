@@ -1,0 +1,81 @@
+#projects {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.project > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.project-img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.project-video {
+    max-width: 100%;
+}
+
+.project-header-container {
+    margin-left: 10%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin: 0 40px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    flex: 1 0 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.slider-nav button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav button:hover {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .project-header-container {
+        gap: 10px;
+    }
+
+    .slider {
+        margin: 0 20px;
+    }
+}

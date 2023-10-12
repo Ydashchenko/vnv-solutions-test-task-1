@@ -1,0 +1,102 @@
+@keyframes fade-in-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-from-center {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-out-to-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out-to-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+}
+
+
+.fade-out-to-top {
+  animation: fade-out-to-top 0.5s ease-in-out;
+}
+
+.fade-out-to-right {
+  animation: fade-out-to-right 0.5s ease-in-out;
+}
+
+.messenger-link, .social-media-links div {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.messenger-link:hover, .social-media-links div:hover {
+  transform: scale(1.1);
+
+}
+
+.messenger-link::before, .social-media-links div::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px; 
+  background-color: #ffffff; 
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(-50%);
+  transition: width 0.3s; 
+  opacity: 0;
+}
+
+.messenger-link:hover::before, .social-media-links div:hover::before {
+  width: 100%; 
+  opacity: 1;
+}

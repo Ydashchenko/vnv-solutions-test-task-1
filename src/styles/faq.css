@@ -1,0 +1,42 @@
+.question {
+    font-weight: 800;
+    text-indent: 20px;
+}
+
+.faq-container {
+    margin: 0 40px;
+}
+
+.faqs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    border-left: white solid 1px;
+    padding-left: 10px;
+}
+
+#faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    animation: fade-in-from-bottom 1s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .faq-container {
+        margin: 0 20px;
+    }
+
+    .faq {
+        gap: 0;
+    }
+}

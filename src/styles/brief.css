@@ -1,0 +1,35 @@
+.brief-container {
+    margin: 0 40px;
+    animation: fade-in-from-left 1s ease-in-out;
+}
+
+#brief {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.brief-container button {
+    padding: 10px;
+    border-radius: 10px;
+    color: inherit;
+    background-color: inherit;
+    border: solid white 1px;
+    will-change: filter;
+    transition: 300ms;
+    margin-left: 80%;
+    font-size: 1rem;
+}
+
+.brief-container button:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 2em #fffffff5);
+    background-color: grey;
+}
+
+@media (max-width: 600px) {
+    .brief-container {
+        margin: 0 20px;
+    }
+}

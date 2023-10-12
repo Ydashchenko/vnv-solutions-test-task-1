@@ -1,0 +1,203 @@
+.main-logo {
+    height: 8em;
+    padding: 0.5rem;
+    will-change: filter;
+    transition: filter 300ms;
+    filter: drop-shadow(0 0 0 #fffffff5);
+    transition: 0.5s;
+    animation: fade-in-from-left 1s ease-in-out;
+}
+.main-logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 2em #fffffff5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 40px;
+}
+
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+h1 b {
+    font-weight: bold;
+}
+
+.main-heading {
+    font-size: 4em;
+    line-height: 1.5;
+    font-weight: 100;
+    align-self: center;
+    margin: 40px;
+    animation: fade-in-from-bottom 1s ease-in-out;
+}
+
+#index {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.nav-items a {
+    font-weight: 500;
+    text-decoration: inherit;
+    cursor: pointer;
+    transition: 0.4s;
+}
+  
+.nav-items a:hover {
+    transform: scale(1.2);
+}
+
+.order-button {
+    align-self: center;
+    padding: 20px;
+    color: inherit;
+    background-color: inherit;
+    border: 2px solid white;
+    font-size: 2rem;
+    will-change: filter;
+    filter: drop-shadow(0 0 0 #fffffff5);
+    transition: 0.5s;
+    border-radius: 10px;
+    animation: slow-jump 1s ease infinite, fade-in-from-bottom 1s ease-in-out;
+}
+
+@keyframes slow-jump {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+}
+  
+.order-button:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 2em #fffffff5);
+    background-color: grey;
+}
+
+/* Your other CSS styles */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    animation: fade-in-from-right 1s ease-in-out;
+}
+
+.bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.nav-items {
+    display: flex;
+    animation: fade-in-from-right 1s ease-in-out;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+    .main-logo {
+        height: 5em;
+    }
+
+    .main-heading {
+        font-size: 2em;
+        margin: 20px;
+    }
+
+    nav {
+        margin: 0 10px;
+    }
+
+    .order-button {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        display: block;
+        font-size: 1em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+
+    .menu-toggle {
+        display: flex;
+        justify-content: center;
+        transition: 0.2s;
+    }
+
+    .menu-toggle:hover {
+        transform: scale(1.4);
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        background-color: #333333f1;
+        border-radius: 20px;
+        padding: 0 20px;
+        position: absolute;
+        top: 120px;
+        right: 0;
+        border: white 1px solid;
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    .nav-items.active {
+        display: flex;
+        align-items: end;
+        z-index: 5;
+    }
+
+    .nav-items a {
+        padding: 15px 0;
+    }
+}

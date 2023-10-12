@@ -1,0 +1,111 @@
+.feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: white solid 2px;
+    border-radius: 20px;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    animation: fade-in-from-right 1s ease-in-out;
+}
+
+.feedback div {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 5px 10px;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback img {
+    border: none;
+    width: 80px;
+}
+
+.feedback * {
+    border: white solid 1px;
+    border-radius: 5px;
+    color: inherit;
+}
+
+.feedback button {
+    background-color: black;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.feedback button:hover {
+    background-color: grey;
+}
+
+textarea {
+    resize: none;
+}
+
+.feedback input, .feedback select, .feedback textarea {
+    padding: 10px;
+    background-color: rgb(49, 49, 49);
+}
+
+.contacts-body {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.contacts-container {
+    margin: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contacts-container h3, .messenger-links {
+    animation: fade-in-from-left 1s ease-in-out;
+}
+
+.messenger-links div {
+    display: flex;
+    gap: 10px;
+}
+
+.messenger-link img {
+    width: 40px;
+    height: 40px;
+}
+
+.messenger-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.messenger-link {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .contacts-container {
+        gap: 20px;
+    }
+}
