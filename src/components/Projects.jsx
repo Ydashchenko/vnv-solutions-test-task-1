@@ -26,7 +26,7 @@ export default function Projects() {
                     <a href="https://volstinyproduction.com/" target="_blank" rel="noreferrer">
                         <img className='project-img' src={marketImg} alt="market-img" draggable="false" />
                     </a>
-                    <video className='project-video' autoPlay loop muted src={marketVid}></video>
+                    <video className='project-video' autoPlay loop muted={true} src={marketVid}></video>
                     <div>
                         <div className='project-header-container'>
                             <h3>01 /</h3>
@@ -46,7 +46,7 @@ export default function Projects() {
                     <a href="https://www.learnitlive.com/" target="_blank" rel='noreferrer'>
                         <img className='project-img' src={webImg} alt="web-img" draggable="false" />
                     </a>
-                    <video className='project-video' autoPlay loop muted src={webVid}></video>
+                    <video className='project-video' autoPlay loop muted={true} src={webVid}></video>
                     <div>
                         <div className='project-header-container'>
                             <h3>02 /</h3>
@@ -67,7 +67,7 @@ export default function Projects() {
                     <a href="" target="_blank">
                         <img className='project-img' src={deliveryImg} alt="delivery-img" draggable="false" />
                     </a>
-                    <video className='project-video' autoPlay loop muted src={deliveryVid}></video>
+                    <video className='project-video' autoPlay loop muted={true} src={deliveryVid}></video>
                     <div>
                         <div className='project-header-container'>
                             <h3>03 /</h3>

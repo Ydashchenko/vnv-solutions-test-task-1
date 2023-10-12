@@ -45,7 +45,7 @@ export default function Header() {
                     <div className="bar"></div>
                 </div>
             </nav>
-            <video className="header-video" autoPlay muted loop playsInline>
+            <video className="header-video" autoPlay muted={true} loop playsInline>
                 <source src={videoBackgroundMp4} type="video/mp4"/>
                 <source src={videoBackgroundWebm} type="video/webm"/>
             </video>
