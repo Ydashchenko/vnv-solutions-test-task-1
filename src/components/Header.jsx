@@ -8,7 +8,18 @@ export default function Header() {
     const [menuActive, setMenuActive] = useState(false);
 
     const toggleMenu = () => {
-        setMenuActive(!menuActive);
+        const menu = document.querySelector('.nav-items')
+        if (menuActive == false) {
+            menu.classList.remove("fade-out-to-right")
+            menu.classList.add('fade-in')
+        }
+        if (menuActive == true) {
+            menu.classList.remove("fade-in")
+            menu.classList.add("fade-out-to-right")
+        }
+        setTimeout(() => {
+            setMenuActive(!menuActive);
+        }, 500);
     };
     return (
         <header id="index">

@@ -129,7 +129,13 @@ h1 b {
 
 .nav-items {
     display: flex;
-    animation: fade-in-from-right 1s ease-in-out;
+}
+
+.nav-items.fade-in {
+    animation: fade-in-from-right 0.5s ease-in-out;
+    display: flex;
+    align-items: end;
+    z-index: 5;
 }
 
 .nav-items a {
@@ -198,6 +204,6 @@ h1 b {
     }
 
     .nav-items a {
-        padding: 15px 0;
+        padding: 0px 0;
     }
 }

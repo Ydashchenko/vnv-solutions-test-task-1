@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 export default function FAQ() {
     return (
         <div id='faq'>
-            <Fade direction='up'>
+            <Fade direction='right'>
             <div className='faq-container'>
                 <h3 className='component-heading'>/ FAQ</h3>
                 <div className="faqs">
