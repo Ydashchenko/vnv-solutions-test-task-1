@@ -1,7 +1,10 @@
 import { useState } from "react"
 import logo from "../media/vnv-logo.png"
 import '../styles/header.css'
-import videoBackground from '../media/header-background.mp4'
+import videoBackgroundMp4 from '../media/header-background.mp4'
+import videoBackgroundWebm from '../media/header-background.webm'
+import videoBackgroundM4v from '../media/header-background.m4v'
+
 import { Link } from 'react-scroll'
 
 export default function Header() {
@@ -42,7 +45,11 @@ export default function Header() {
                     <div className="bar"></div>
                 </div>
             </nav>
-            <video className="header-video" autoPlay muted loop playsInline src={videoBackground} type="video/mp4"></video>
+            <video className="header-video" autoPlay muted loop playsInline>
+                <source src={videoBackgroundM4v} type="video/mp4"/>
+                <source src={videoBackgroundMp4} type="video/mp4"/>
+                <source src={videoBackgroundWebm} type="video/webm"/>
+            </video>
             <h1 className="main-heading">
                 Easy, quality, IT -
                 <br />
