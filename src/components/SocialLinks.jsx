@@ -3,7 +3,7 @@ import facebookLogo from '../media/facebook-img.svg'
 import linkedInLogo from '../media/linkedin-img.svg'
 import tikTokLogo from '../media/tiktok-img.svg'
 import '../styles/social-links.css'
-import { Fade } from 'react-reveal'
+import { Fade } from "react-awesome-reveal";
 
 export default function SocialLinks() {
     return (

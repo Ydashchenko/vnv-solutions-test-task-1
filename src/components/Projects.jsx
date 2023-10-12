@@ -1,6 +1,6 @@
 import '../styles/projects.css';
 import { useRef, useState } from 'react';
-import { Fade } from 'react-reveal'
+import { Fade } from "react-awesome-reveal";
 
 import marketImg from '../media/marketplace-img.png';
 import webImg from '../media/web-service-img.png';
@@ -25,7 +25,7 @@ export default function Projects() {
     };
 
     return (
-        <Fade right duration={1000}>
+        <Fade direction='right'>
         <div id="projects">
             <div className='slider' ref={sliderRef}>
                 <div id='marketplace' className={`project ${activeSlide === 'marketplace' ? 'active' : ''}`}>

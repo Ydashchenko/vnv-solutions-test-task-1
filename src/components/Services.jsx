@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react"
 import '../styles/services.css'
-import { Fade } from 'react-reveal'
+import { Fade } from "react-awesome-reveal";
 
 export default function Services() {
     const [selectedService, setSelectedService] = useState('software-dev')

@@ -1,10 +1,10 @@
 import '../styles/whyus.css'
-import { Fade } from 'react-reveal'
+import { Fade } from "react-awesome-reveal";
 
 export default function WhyUs() {
     return (
         <div id='why-us'>
-            <Fade left duration={1500}>
+            <Fade direction='left'>
             <div className='why-container'>
                 <h3 className='component-heading'>/ WHY US?</h3>
                 <ul className='why-list'>

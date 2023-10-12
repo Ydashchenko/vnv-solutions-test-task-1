@@ -1,10 +1,10 @@
 import '../styles/faq.css'
-import { Fade } from 'react-reveal'
+import { Fade } from "react-awesome-reveal";
 
 export default function FAQ() {
     return (
         <div id='faq'>
-            <Fade top>
+            <Fade direction='up'>
             <div className='faq-container'>
                 <h3 className='component-heading'>/ FAQ</h3>
                 <div className="faqs">

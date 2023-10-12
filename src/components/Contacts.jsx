@@ -4,7 +4,7 @@ import emailLogo from '../media/email-img.png'
 import telegramLogo from '../media/telegram-img.svg'
 import whatsappLogo from '../media/whatsapp-img.svg'
 import viberLogo from '../media/viber-img.svg'
-import { Fade } from 'react-reveal'
+import { Fade } from "react-awesome-reveal";
 
 
 export default function Contacts() {
@@ -70,11 +70,11 @@ export default function Contacts() {
     return (
         <div id="contacts">
             <div className="contacts-container">
-                <Fade left duration={1000}>
+                <Fade direction='right'>
                     <h3 className="component-heading">/ CONTACT US!</h3>
                 </Fade>
                 <div className="contacts-body">
-                    <Fade left duration={1000}>
+                    <Fade direction='right'>
                     <div className="messenger-links">
                         <div className="email messenger-link">
                             <img src={emailLogo} alt="email" />
@@ -94,7 +94,7 @@ export default function Contacts() {
                         </div>
                     </div>
                     </Fade>
-                    <Fade right duration={1000}>
+                    <Fade direction='left' duration={1000}>
                     <form className='feedback' onSubmit={handleSubmit}>
                         <div>
                             <img src={emailLogo} alt="Email"/>
