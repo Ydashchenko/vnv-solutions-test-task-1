@@ -1,6 +1,7 @@
 import '../styles/projects.css';
-import { useRef, useState } from 'react';
 import { Fade } from "react-awesome-reveal";
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 import marketImg from '../media/marketplace-img.png';
 import webImg from '../media/web-service-img.png';
@@ -10,25 +11,18 @@ import webVid from '../media/web-service-video.mp4'
 import deliveryVid from '../media/delivery-service-video.mp4'
 
 export default function Projects() {
-    const sliderRef = useRef(null);
-    const [activeSlide, setActiveSlide] = useState('delivery-service');
-
-    const handleSlideChange = (slideId) => {
-        setActiveSlide(slideId);
-        const slideElement = document.getElementById(slideId);
-        if (slideElement && sliderRef.current) {
-        sliderRef.current.scrollTo({
-            left: slideElement.offsetLeft,
-            behavior: 'smooth',
-        });
-        }
-    };
-
     return (
         <Fade direction='right'>
         <div id="projects">
-            <div className='slider' ref={sliderRef}>
-                <div id='marketplace' className={`project ${activeSlide === 'marketplace' ? 'active' : ''}`}>
+            <CarouselProvider
+            naturalSlideWidth={100}
+            naturalSlideHeight={125}
+            infinite
+            totalSlides={3}
+            >
+            <Slider className='slider'>
+                <Slide index={0}>
+                <div id='marketplace' className="project">
                     <a href="https://volstinyproduction.com/" target="_blank" rel="noreferrer">
                         <img className='project-img' src={marketImg} alt="market-img" draggable="false" />
                     </a>
@@ -46,7 +40,9 @@ export default function Projects() {
                         </p>
                     </div>
                 </div>
-                <div id='web-service' className={`project ${activeSlide === 'web-service' ? 'active' : ''}`}>
+                </Slide>
+                <Slide index={1}>
+                <div id='web-service' className="project">
                     <a href="https://www.learnitlive.com/" target="_blank" rel='noreferrer'>
                         <img className='project-img' src={webImg} alt="web-img" draggable="false" />
                     </a>
@@ -65,7 +61,9 @@ export default function Projects() {
                         </p>
                     </div>
                 </div>
-                <div id='delivery-service' className={`project ${activeSlide === 'delivery-service' ? 'active' : ''}`}>
+                </Slide>
+                <Slide index={2}>
+                <div id='delivery-service' className="project">
                     <a href="" target="_blank">
                         <img className='project-img' src={deliveryImg} alt="delivery-img" draggable="false" />
                     </a>
@@ -81,12 +79,9 @@ export default function Projects() {
                         </p>
                     </div>
                 </div>
-            </div>
-            <div className='slider-nav'>
-                <button onClick={() => handleSlideChange('marketplace')}></button>
-                <button onClick={() => handleSlideChange('web-service')}></button>
-                <button onClick={() => handleSlideChange('delivery-service')}></button>
-            </div>
+                </Slide>
+            </Slider>
+            </CarouselProvider>
         </div>
         </Fade>
     )
