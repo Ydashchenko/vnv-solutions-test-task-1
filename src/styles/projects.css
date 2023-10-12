@@ -35,6 +35,12 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     margin: 0 40px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
 }
 
 .project {
