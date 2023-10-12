@@ -42,7 +42,7 @@ export default function Header() {
                     <div className="bar"></div>
                 </div>
             </nav>
-            <video className="header-video" autoPlay muted loop src={videoBackground} type="video/mp4"></video>
+            <video className="header-video" autoPlay muted loop playsInline src={videoBackground} type="video/mp4"></video>
             <h1 className="main-heading">
                 Easy, quality, IT -
                 <br />
